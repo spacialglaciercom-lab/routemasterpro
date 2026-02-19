@@ -1,0 +1,111 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 20% 95%;
+    --foreground: 0 0% 7%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 7%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 7%;
+    --primary: 0 0% 7%;
+    --primary-foreground: 0 0% 98%;
+    --secondary: 40 20% 95%;
+    --secondary-foreground: 0 0% 7%;
+    --muted: 40 10% 90%;
+    --muted-foreground: 0 0% 44%;
+    --accent: 78 100% 61%;
+    --accent-foreground: 0 0% 7%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 0 0% 7%;
+    --input: 0 0% 7%;
+    --ring: 78 100% 61%;
+    --radius: 1.75rem;
+    
+    --lime: #B7FF3A;
+    --off-white: #F4F2EE;
+    --near-black: #111111;
+    --text-secondary: #6F6F6F;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply bg-[#F4F2EE] text-[#111111] antialiased;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+    letter-spacing: -0.02em;
+    line-height: 0.95;
+  }
+}
+
+@layer components {
+  .font-display {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+  
+  .font-mono-label {
+    font-family: 'IBM Plex Mono', monospace;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+  }
+  
+  .card-radius {
+    border-radius: 28px;
+  }
+  
+  .card-outline {
+    @apply bg-white border-2 border-[#111111] card-radius;
+  }
+  
+  .card-lime {
+    @apply bg-[#B7FF3A] border-2 border-[#111111] card-radius;
+  }
+  
+  .card-dark {
+    @apply bg-[#111111] text-white card-radius;
+  }
+  
+  .chip {
+    @apply inline-flex items-center px-4 py-2 bg-white border-2 border-[#111111] rounded-full font-mono-label text-xs;
+  }
+  
+  .btn-primary {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-[#B7FF3A] text-[#111111] border-2 border-[#111111] rounded-full font-medium transition-transform hover:-translate-y-0.5;
+  }
+  
+  .btn-secondary {
+    @apply inline-flex items-center justify-center px-6 py-3 bg-white text-[#111111] border-2 border-[#111111] rounded-full font-medium transition-transform hover:-translate-y-0.5;
+  }
+  
+  .section-pinned {
+    @apply relative w-screen h-screen overflow-hidden;
+  }
+  
+  .grain-overlay {
+    @apply fixed inset-0 pointer-events-none opacity-[0.04] mix-blend-multiply z-50;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
