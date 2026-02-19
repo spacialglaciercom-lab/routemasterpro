@@ -191,9 +191,9 @@ const HeroSection = ({ className = '' }: HeroSectionProps) => {
 
           {/* CTA */}
           <div ref={ctaRef}>
-            <button onClick={scrollToContact} className="btn-primary mb-4">
+            <a href="https://testflight.apple.com/join/RcQrgjPn" target="_blank" rel="noopener noreferrer" className="btn-primary mb-4 inline-block">
               Join the beta
-            </button>
+            </a>
             <p className="text-sm text-[#6F6F6F]">
               Available on TestFlight • iOS 15+
             </p>
