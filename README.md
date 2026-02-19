@@ -1,3 +1,21 @@
+# RouteMaster Pro
+
+Marketing site for [routemasterpro.ca](https://routemasterpro.ca). React + TypeScript + Vite.
+
+## Contact form (Resend)
+
+The “Request Beta Access” form sends email via [Resend](https://resend.com) (free tier: 3,000 emails/month).
+
+1. Copy `.env.example` to `.env` and set:
+   - `RESEND_API_KEY` – from [Resend API Keys](https://resend.com/api-keys)
+   - `CONTACT_EMAIL` – address that receives signups
+2. On **Vercel**: add the same variables in Project → Settings → Environment Variables.
+3. Deploy; the `/api/send-email` serverless function runs automatically.
+
+Local dev: the form works when using `vercel dev`, or when deployed (same-origin `/api/send-email`).
+
+---
+
 # React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.

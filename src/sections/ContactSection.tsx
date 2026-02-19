@@ -14,6 +14,8 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
   const textRef = useRef<HTMLDivElement>(null);
   const formRef = useRef<HTMLDivElement>(null);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitError, setSubmitError] = useState<string | null>(null);
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -62,9 +64,26 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
     return () => ctx.revert();
   }, []);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitted(true);
+    setSubmitError(null);
+    setIsSubmitting(true);
+    try {
+      const response = await fetch('/api/send-email', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+      const data = await response.json().catch(() => ({}));
+      if (!response.ok) {
+        throw new Error(data.error || `Request failed (${response.status})`);
+      }
+      setIsSubmitted(true);
+    } catch (err) {
+      setSubmitError(err instanceof Error ? err.message : 'Something went wrong. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const handleChange = (
@@ -161,6 +180,11 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
                   <h3 className="font-display font-bold text-xl text-[#111111] mb-6">
                     Request Beta Access
                   </h3>
+                  {submitError && (
+                    <div className="p-3 rounded-xl bg-red-100 border border-red-300 text-red-800 text-sm">
+                      {submitError}
+                    </div>
+                  )}
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
                     <div>
@@ -217,14 +241,19 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
                       value={formData.message}
                       onChange={handleChange}
                       rows={4}
+                      required
                       className="w-full px-4 py-3 bg-[#F4F2EE] border-2 border-[#111111] rounded-xl text-[#111111] placeholder-[#6F6F6F] focus:outline-none focus:ring-2 focus:ring-[#B7FF3A] resize-none"
                       placeholder="Tell us about your operation..."
                     />
                   </div>
 
-                  <button type="submit" className="btn-primary w-full">
+                  <button
+                    type="submit"
+                    className="btn-primary w-full disabled:opacity-60 disabled:pointer-events-none"
+                    disabled={isSubmitting}
+                  >
                     <Send className="w-5 h-5 mr-2" />
-                    Request Access
+                    {isSubmitting ? 'Sending…' : 'Request Access'}
                   </button>
                 </form>
               )}
