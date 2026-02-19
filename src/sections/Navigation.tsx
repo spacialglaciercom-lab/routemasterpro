@@ -62,12 +62,14 @@ const Navigation = () => {
                 {item.label}
               </button>
             ))}
-            <button
-              onClick={() => scrollToSection('#contact')}
+            <a
+              href="https://testflight.apple.com/join/RcQrgjPn"
+              target="_blank"
+              rel="noopener noreferrer"
               className="btn-primary text-sm"
             >
               Join the beta
-            </button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -97,12 +99,14 @@ const Navigation = () => {
                 {item.label}
               </button>
             ))}
-            <button
-              onClick={() => scrollToSection('#contact')}
-              className="btn-primary text-lg mt-4 w-full"
+            <a
+              href="https://testflight.apple.com/join/RcQrgjPn"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary text-lg mt-4 w-full block text-center"
             >
               Join the beta
-            </button>
+            </a>
           </div>
         </div>
       )}
