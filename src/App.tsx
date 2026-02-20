@@ -11,11 +11,17 @@ import CapabilitiesSection from './sections/CapabilitiesSection';
 import ProcessSection from './sections/ProcessSection';
 import ImpactSection from './sections/ImpactSection';
 import ContactSection from './sections/ContactSection';
+import { MapillaryCallback } from './pages/MapillaryCallback';
 
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   const mainRef = useRef<HTMLDivElement>(null);
+
+  // Mapillary OAuth callback (TrashRoute app redirects here)
+  if (typeof window !== 'undefined' && window.location.pathname.replace(/\/$/, '') === '/mapillary-callback') {
+    return <MapillaryCallback />;
+  }
 
   useEffect(() => {
     // Global snap for pinned sections
