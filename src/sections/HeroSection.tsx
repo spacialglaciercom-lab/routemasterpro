@@ -2,6 +2,7 @@ import { useEffect, useRef, useLayoutEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { MapPin, Navigation, Zap } from 'lucide-react';
+import { TESTFLIGHT_INVITE_URL } from '@/constants';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -191,7 +192,7 @@ const HeroSection = ({ className = '' }: HeroSectionProps) => {
 
           {/* CTA */}
           <div ref={ctaRef}>
-            <a href="https://testflight.apple.com/join/RcQrgjPn" target="_blank" rel="noopener noreferrer" className="btn-primary mb-4 inline-block">
+            <a href={TESTFLIGHT_INVITE_URL} target="_blank" rel="noopener noreferrer" className="btn-primary mb-4 inline-block">
               Join the beta
             </a>
             <p className="text-sm text-[#6F6F6F]">

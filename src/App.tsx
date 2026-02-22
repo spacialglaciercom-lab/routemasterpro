@@ -12,14 +12,22 @@ import ProcessSection from './sections/ProcessSection';
 import ImpactSection from './sections/ImpactSection';
 import ContactSection from './sections/ContactSection';
 import { MapillaryCallback } from './pages/MapillaryCallback';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 
 gsap.registerPlugin(ScrollTrigger);
 
 function App() {
   const mainRef = useRef<HTMLDivElement>(null);
 
+  const pathname = typeof window !== 'undefined' ? window.location.pathname.replace(/\/$/, '') || '/' : '/';
+
+  // Privacy Policy page (for App Store / Play Store and footer link)
+  if (pathname === '/privacy') {
+    return <PrivacyPolicy />;
+  }
+
   // Mapillary OAuth callback (TrashRoute app redirects here)
-  if (typeof window !== 'undefined' && window.location.pathname.replace(/\/$/, '') === '/mapillary-callback') {
+  if (pathname === '/mapillary-callback') {
     return <MapillaryCallback />;
   }
 

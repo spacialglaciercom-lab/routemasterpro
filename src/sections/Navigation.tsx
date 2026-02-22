@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import { TESTFLIGHT_INVITE_URL } from '@/constants';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -63,7 +64,7 @@ const Navigation = () => {
               </button>
             ))}
             <a
-              href="https://testflight.apple.com/join/RcQrgjPn"
+              href={TESTFLIGHT_INVITE_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary text-sm"
@@ -100,7 +101,7 @@ const Navigation = () => {
               </button>
             ))}
             <a
-              href="https://testflight.apple.com/join/RcQrgjPn"
+              href={TESTFLIGHT_INVITE_URL}
               target="_blank"
               rel="noopener noreferrer"
               className="btn-primary text-lg mt-4 w-full block text-center"

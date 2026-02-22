@@ -271,13 +271,13 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
           </div>
           <div className="flex gap-6">
             <a
-              href="#"
+              href="/privacy"
               className="text-[#6F6F6F] text-sm hover:text-white transition-colors"
             >
               Privacy Policy
             </a>
             <a
-              href="#"
+              href="#contact"
               className="text-[#6F6F6F] text-sm hover:text-white transition-colors"
             >
               Terms of Service

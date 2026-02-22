@@ -2,6 +2,7 @@ import { useRef, useLayoutEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import { Check, Download, Globe, Smartphone, Wifi } from 'lucide-react';
+import { TESTFLIGHT_INVITE_URL } from '@/constants';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -178,10 +179,15 @@ const SolutionSection = ({ className = '' }: SolutionSectionProps) => {
           </div>
 
           <div ref={ctaRef} className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-            <button onClick={scrollToContact} className="btn-primary">
+            <a
+              href={TESTFLIGHT_INVITE_URL}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="btn-primary inline-flex items-center"
+            >
               <Download className="w-5 h-5 mr-2" />
               Download on TestFlight
-            </button>
+            </a>
             <span className="text-sm text-[#6F6F6F]">iOS 15+ required</span>
           </div>
         </div>
