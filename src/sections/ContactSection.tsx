@@ -325,12 +325,3 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
 };
 
 export default ContactSection;
-      </a>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
-
-export default ContactSection;
