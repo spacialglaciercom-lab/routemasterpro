@@ -10,6 +10,7 @@ import {
   WifiOff,
   Moon,
   CheckCircle,
+  Zap,
 } from 'lucide-react';
 
 gsap.registerPlugin(ScrollTrigger);
