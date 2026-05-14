@@ -108,33 +108,33 @@ const OverviewSection = ({ className = '' }: OverviewSectionProps) => {
   const overviewItems = [
     {
       num: '01',
-      title: 'The Challenge',
-      desc: 'Understanding the pain points in traditional route planning.',
+      title: 'Legacy Limitations',
+      desc: 'Why traditional routing engines fail at city-scale optimization.',
     },
     {
       num: '02',
-      title: 'Meet RouteMaster Pro',
-      desc: 'The solution built for waste collection professionals.',
+      title: 'The Rust Engine',
+      desc: 'A complete rewrite focused on memory safety and ultra-fast solvers.',
     },
     {
       num: '03',
-      title: 'Key Features',
-      desc: 'Powerful tools designed for modern operations.',
+      title: 'Modern Data Stack',
+      desc: 'Leveraging Overture Maps and optimized .rmp binary formats.',
     },
     {
       num: '04',
-      title: 'How It Works',
-      desc: 'Simple three-step process to optimized routes.',
+      title: 'Agentic Workflows',
+      desc: 'Deploying AI-native automation via the Model Context Protocol (MCP).',
     },
     {
       num: '05',
-      title: 'Business Impact',
-      desc: 'Real results and measurable benefits.',
+      title: 'Performance Benchmarks',
+      desc: 'Quantifying the 90% reduction in size and sub-second solve times.',
     },
     {
       num: '06',
-      title: 'Get Started',
-      desc: 'Join the beta and start optimizing today.',
+      title: 'Open Source Core',
+      desc: 'Transparent, portable, and built for the community.',
     },
   ];
 

@@ -1,6 +1,5 @@
 import { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
-import { TESTFLIGHT_INVITE_URL } from '@/constants';
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -18,7 +17,7 @@ const Navigation = () => {
   const navItems = [
     { label: 'Features', href: '#capabilities' },
     { label: 'How it works', href: '#process' },
-    { label: 'Impact', href: '#impact' },
+    { label: 'Performance', href: '#impact' },
     { label: 'Contact', href: '#contact' },
   ];
 
@@ -63,14 +62,12 @@ const Navigation = () => {
                 {item.label}
               </button>
             ))}
-            <a
-              href={TESTFLIGHT_INVITE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => scrollToSection('#contact')}
               className="btn-primary text-sm"
             >
-              Join the beta
-            </a>
+              Get Started
+            </button>
           </div>
 
           {/* Mobile Menu Button */}
@@ -100,14 +97,12 @@ const Navigation = () => {
                 {item.label}
               </button>
             ))}
-            <a
-              href={TESTFLIGHT_INVITE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
+            <button
+              onClick={() => scrollToSection('#contact')}
               className="btn-primary text-lg mt-4 w-full block text-center"
             >
-              Join the beta
-            </a>
+              Get Started
+            </button>
           </div>
         </div>
       )}

@@ -73,52 +73,52 @@ const CapabilitiesSection = ({ className = '' }: CapabilitiesSectionProps) => {
 
   const capabilities = [
     {
-      icon: Upload,
-      title: 'GPX Import/Export',
-      desc: 'Import and export GPX files seamlessly. Plan and optimize collection routes with intuitive tools.',
-      category: 'Route Planning',
-    },
-    {
-      icon: Volume2,
-      title: 'Voice Guidance',
-      desc: 'Turn-by-turn navigation with real-time voice guidance keeps drivers on track.',
-      category: 'Navigation',
-    },
-    {
-      icon: Eye,
-      title: 'Street-Level Imagery',
-      desc: 'Preview destinations with Mapillary integration. Know exactly where to stop.',
-      category: 'Mapillary Powered',
-    },
-    {
-      icon: Plane,
-      title: 'Aerial Imagery',
-      desc: 'Quebec government orthophoto layer provides detailed aerial views.',
-      category: 'Quebec Optimized',
-    },
-    {
-      icon: MapPin,
-      title: 'Smart Markers',
-      desc: 'Save favorites, create custom markers, and search addresses efficiently.',
-      category: 'Organization',
+      icon: Zap,
+      title: 'Rust Core Solver',
+      desc: 'Blazing-fast CPP and VRP solvers optimized for edge coverage and turn penalties with zero Python overhead.',
+      category: 'Performance',
     },
     {
       icon: WifiOff,
-      title: 'Offline Support',
-      desc: 'Download maps for offline use. Navigate without cellular connectivity.',
-      category: 'Anywhere Access',
+      title: 'MCP Server',
+      desc: 'Native Model Context Protocol support. Let AI agents (Claude/Cursor) trigger routing workflows programmatically.',
+      category: 'Agent-First',
     },
     {
-      icon: Moon,
-      title: 'Dark Mode',
-      desc: 'Switch between standard and dark map styles. Easy on the eyes.',
-      category: 'Driver Comfort',
+      icon: MapPin,
+      title: 'Overture Support',
+      desc: 'Extract multi-source data directly from Overture Maps via AWS S3 or OpenStreetMap PBF files.',
+      category: 'Data Architecture',
     },
     {
       icon: CheckCircle,
-      title: 'Track Completion',
-      desc: 'Mark stops as completed, add notes, and keep routes organized.',
-      category: 'Progress Tracking',
+      title: 'Pure Rust ML',
+      desc: 'Powered by Candle for AutoML hyperparameter tuning and neural-guided search without heavy dependencies.',
+      category: 'Intelligence',
+    },
+    {
+      icon: Plane,
+      title: 'Terrain Awareness',
+      desc: 'Elevation-aware routing using DEM GeoTIFFs to calculate precise fuel consumption and stats.',
+      category: 'Optimization',
+    },
+    {
+      icon: Upload,
+      title: 'Optimized .rmp',
+      desc: 'A custom binary format providing 90% size reduction vs GeoJSON with CRC32 integrity checking.',
+      category: 'Data Storage',
+    },
+    {
+      icon: Eye,
+      title: 'TUI & GUI',
+      desc: 'Versatile interfaces including a Terminal UI and an egui-based desktop application for all workflows.',
+      category: 'Interface',
+    },
+    {
+      icon: Volume2,
+      title: 'Headless Server',
+      desc: 'Full JSON-RPC support for integration into existing pipelines and enterprise infrastructure.',
+      category: 'Connectivity',
     },
   ];
 
@@ -132,11 +132,10 @@ const CapabilitiesSection = ({ className = '' }: CapabilitiesSectionProps) => {
         {/* Heading */}
         <div ref={headingRef} className="max-w-3xl mb-12 lg:mb-16">
           <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-[#111111] mb-4">
-            Powerful features for modern waste management
+            Next-generation spatial infrastructure
           </h2>
           <p className="text-lg text-[#6F6F6F]">
-            Everything you need to plan, navigate, and finish routes—without the
-            backtracking.
+            Built from the ground up in Rust for performance, portability, and AI-native automation.
           </p>
         </div>
 

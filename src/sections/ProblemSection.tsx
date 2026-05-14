@@ -97,25 +97,25 @@ const ProblemSection = ({ className = '' }: ProblemSectionProps) => {
   const painPoints = [
     {
       icon: Clock,
-      title: 'Time Wasted',
-      desc: 'Inefficient routes mean longer days and missed pickups. Manual planning consumes 25+ hours per week across teams.',
+      title: 'Legacy Latency',
+      desc: 'Traditional routing engines struggle with city-scale networks, taking minutes to solve simple VRP problems.',
     },
     {
       icon: Fuel,
-      title: 'Fuel Costs',
-      desc: 'Backtracking and wrong turns burn extra fuel. Unoptimized routes average 620 miles per truck daily.',
+      title: 'Heavy Dependencies',
+      desc: 'Complex Python/C++ stacks are hard to deploy and maintain, requiring heavy infrastructure and constant patching.',
     },
     {
       icon: AlertTriangle,
-      title: 'Driver Confusion',
-      desc: 'Unclear directions lead to stress and delays. Drivers struggle with complex routes and missed stops.',
+      title: 'Static & Disconnected',
+      desc: 'Lack of native AI/Agent support (MCP) means routing remains a manual, siloed process instead of an automated workflow.',
     },
   ];
 
   const stats = [
-    { value: '62%', label: 'less time with optimization' },
-    { value: '28%', label: 'reduction in mileage' },
-    { value: '72% → 94%', label: 'on-time arrival improvement' },
+    { value: '90%', label: 'reduction in binary size' },
+    { value: '<1s', label: 'solve time for city-scale maps' },
+    { value: '0', label: 'Python/Heavy dependencies' },
   ];
 
   return (
@@ -131,7 +131,7 @@ const ProblemSection = ({ className = '' }: ProblemSectionProps) => {
         >
           <img
             src="/images/problem_truck_road.jpg"
-            alt="Waste truck on road"
+            alt="Technical visualization of network complexity"
             className="w-full h-full object-cover"
           />
         </div>
@@ -142,15 +142,14 @@ const ProblemSection = ({ className = '' }: ProblemSectionProps) => {
           className="card-outline absolute left-[4vw] lg:left-[36vw] top-[10vh] w-[92vw] lg:w-[34vw] h-auto min-h-[34vh] p-6 lg:p-8"
         >
           <span className="font-mono-label text-xs text-[#6F6F6F] mb-4 block">
-            THE PROBLEM
+            THE LIMITATION
           </span>
           <h2 className="font-display font-bold text-2xl lg:text-3xl xl:text-4xl text-[#111111] mb-4">
-            The Waste Collection Challenge
+            Routing is stuck in the past
           </h2>
           <p className="text-sm lg:text-base text-[#6F6F6F]">
-            Inefficient routes mean longer days, missed pickups, and burned fuel.
-            Manual planning eats hours every week—and still leaves drivers
-            guessing.
+            Current solutions are bloated, slow, and disconnected from the modern AI stack. 
+            Legacy systems fail to leverage new data architectures like Overture Maps or native agentic automation.
           </p>
         </div>
 
@@ -161,7 +160,7 @@ const ProblemSection = ({ className = '' }: ProblemSectionProps) => {
         >
           <img
             src="/images/problem_worker_smiling.jpg"
-            alt="Waste worker smiling"
+            alt="Technical diagram"
             className="w-full h-full object-cover"
           />
         </div>
@@ -206,8 +205,8 @@ const ProblemSection = ({ className = '' }: ProblemSectionProps) => {
           </div>
 
           <p className="text-sm text-[#6F6F6F] mt-6 text-center">
-            RouteMaster Pro was built to solve these problems with smart
-            navigation designed for waste collection professionals.
+            v2rmp was engineered to break these bottlenecks, delivering a high-performance 
+            Rust implementation that is ready for the agentic future.
           </p>
         </div>
       </div>

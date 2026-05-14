@@ -1,8 +1,8 @@
 import { useEffect, useRef, useLayoutEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { MapPin, Navigation, Zap } from 'lucide-react';
-import { TESTFLIGHT_INVITE_URL } from '@/constants';
+import { MapPin, Navigation, Zap, Globe, Box, Brain } from 'lucide-react';
+import { GITHUB_URL } from '@/constants';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -135,7 +135,7 @@ const HeroSection = ({ className = '' }: HeroSectionProps) => {
         >
           <img
             src="/images/hero_truck_driver.jpg"
-            alt="Waste collection worker"
+            alt="Technical visualization of v2rmp engine performance"
             className="w-full h-full object-cover"
           />
         </div>
@@ -145,10 +145,10 @@ const HeroSection = ({ className = '' }: HeroSectionProps) => {
           ref={rightCardRef}
           className="card-outline absolute lg:left-[52vw] lg:top-[10vh] lg:w-[44vw] lg:h-[80vh] left-4 right-4 top-[12vh] h-auto min-h-[70vh] p-6 sm:p-8 lg:p-12 flex flex-col justify-center"
         >
-          {/* Beta Badge */}
+          {/* Version Badge */}
           <div className="mb-6">
             <span className="inline-flex items-center px-4 py-2 bg-[#B7FF3A] border-2 border-[#111111] rounded-full font-mono-label text-xs">
-              Beta Now Open
+              Stable Release v2
             </span>
           </div>
 
@@ -157,7 +157,7 @@ const HeroSection = ({ className = '' }: HeroSectionProps) => {
             ref={headlineRef}
             className="font-display font-bold text-4xl sm:text-5xl lg:text-6xl xl:text-7xl text-[#111111] mb-4"
           >
-            RouteMaster Pro
+            RouteMaster Pro <span className="text-[#B7FF3A] bg-[#111111] px-4 py-1 rounded-xl">v2</span>
           </h1>
 
           {/* Subheadline */}
@@ -165,38 +165,44 @@ const HeroSection = ({ className = '' }: HeroSectionProps) => {
             ref={subheadlineRef}
             className="font-display font-semibold text-xl sm:text-2xl lg:text-3xl text-[#111111] mb-6"
           >
-            Smart navigation for smarter routes.
+            High-Performance Route Intelligence.
           </p>
 
           {/* Body */}
           <p className="text-base sm:text-lg text-[#6F6F6F] mb-8 max-w-md">
-            Plan optimized collection routes and guide drivers with turn-by-turn
-            directions—built for waste management teams.
+            A pure Rust optimization engine for the modern spatial web. 
+            Agent-first, terrain-aware, and ultra-fast solvers for CPP and VRP problems.
           </p>
 
           {/* Feature Chips */}
           <div ref={chipsRef} className="flex flex-wrap gap-3 mb-8">
             <span className="chip">
-              <MapPin className="w-4 h-4 mr-2" />
-              Route Planning
+              <Zap className="w-4 h-4 mr-2" />
+              Rust Core
             </span>
             <span className="chip">
               <Navigation className="w-4 h-4 mr-2" />
-              Navigation
+              MCP Server
             </span>
             <span className="chip">
-              <Zap className="w-4 h-4 mr-2" />
-              Efficiency
+              <MapPin className="w-4 h-4 mr-2" />
+              Overture Maps
             </span>
           </div>
 
           {/* CTA */}
           <div ref={ctaRef}>
-            <a href={TESTFLIGHT_INVITE_URL} target="_blank" rel="noopener noreferrer" className="btn-primary mb-4 inline-block">
-              Join the beta
-            </a>
+            <div className="flex flex-wrap gap-4 mb-4">
+              <a href={GITHUB_URL} target="_blank" rel="noopener noreferrer" className="btn-primary inline-flex items-center">
+                <Globe className="w-5 h-5 mr-2" />
+                Explore on GitHub
+              </a>
+              <button onClick={scrollToContact} className="inline-flex items-center text-sm font-semibold text-[#111111] hover:text-[#6F6F6F] transition-colors bg-white border-2 border-[#111111] px-6 py-3 rounded-xl shadow-[4px_4px_0px_#111111] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all">
+                Request Access
+              </button>
+            </div>
             <p className="text-sm text-[#6F6F6F]">
-              Available on TestFlight • iOS 15+
+              Open Core on GitHub • High-Performance Rust
             </p>
           </div>
         </div>

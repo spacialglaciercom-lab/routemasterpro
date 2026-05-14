@@ -1,7 +1,8 @@
 import { useRef, useLayoutEffect, useState } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Mail, Globe, Send, Check } from 'lucide-react';
+import { Mail, Globe, Send, Check, Box, Brain } from 'lucide-react';
+import { GITHUB_URL, CRATES_IO_URL, HUGGING_FACE_URL } from '@/constants';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -103,11 +104,11 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
           {/* Left Text Content */}
           <div ref={textRef} className="lg:w-[42vw] flex flex-col justify-center">
             <h2 className="font-display font-bold text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
-              Ready to optimize your routes?
+              Ready to power your spatial workflows?
             </h2>
             <p className="text-lg text-[#6F6F6F] mb-8">
-              Join our beta and start navigating smarter today. Free during
-              beta—no commitment required.
+              Join our early-access engine development and start building with v2rmp. 
+              Pure Rust, agent-first, and high-performance routing at your fingertips.
             </p>
 
             <div className="space-y-4 mb-8">
@@ -116,7 +117,7 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
                   <Mail className="w-5 h-5 text-[#111111]" />
                 </div>
                 <div>
-                  <div className="text-[#6F6F6F] text-sm">Email</div>
+                  <div className="text-[#6F6F6F] text-sm">Inquiries</div>
                   <a
                     href="mailto:droneservicesqc@proton.me"
                     className="text-white font-semibold hover:text-[#B7FF3A] transition-colors"
@@ -131,14 +132,48 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
                   <Globe className="w-5 h-5 text-[#111111]" />
                 </div>
                 <div>
-                  <div className="text-[#6F6F6F] text-sm">Website</div>
+                  <div className="text-[#6F6F6F] text-sm">Engine Repository</div>
                   <a
-                    href="https://routemasterpro.ca"
+                    href={GITHUB_URL}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-white font-semibold hover:text-[#B7FF3A] transition-colors"
                   >
-                    routemasterpro.ca
+                    github.com/spacialglaciercom-lab/v2rmp
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-[#B7FF3A] border-2 border-white flex items-center justify-center">
+                  <Box className="w-5 h-5 text-[#111111]" />
+                </div>
+                <div>
+                  <div className="text-[#6F6F6F] text-sm">Cargo Crate</div>
+                  <a
+                    href={CRATES_IO_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white font-semibold hover:text-[#B7FF3A] transition-colors"
+                  >
+                    crates.io/crates/v2rmp
+                  </a>
+                </div>
+              </div>
+
+              <div className="flex items-center gap-4">
+                <div className="w-12 h-12 rounded-full bg-[#B7FF3A] border-2 border-white flex items-center justify-center">
+                  <Brain className="w-5 h-5 text-[#111111]" />
+                </div>
+                <div>
+                  <div className="text-[#6F6F6F] text-sm">AI Models</div>
+                  <a
+                    href={HUGGING_FACE_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-white font-semibold hover:text-[#B7FF3A] transition-colors"
+                  >
+                    huggingface.co/aerialblancaservices
                   </a>
                 </div>
               </div>
@@ -147,15 +182,15 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
             <div className="flex flex-wrap gap-4">
               <div className="flex items-center gap-2 text-[#6F6F6F] text-sm">
                 <Check className="w-4 h-4 text-[#B7FF3A]" />
-                Free During Beta
+                Pure Rust Core
               </div>
               <div className="flex items-center gap-2 text-[#6F6F6F] text-sm">
                 <Check className="w-4 h-4 text-[#B7FF3A]" />
-                No Credit Card
+                No Heavy Runtimes
               </div>
               <div className="flex items-center gap-2 text-[#6F6F6F] text-sm">
                 <Check className="w-4 h-4 text-[#B7FF3A]" />
-                Full Features
+                Agentic Ready
               </div>
             </div>
           </div>
@@ -178,7 +213,7 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-4">
                   <h3 className="font-display font-bold text-xl text-[#111111] mb-6">
-                    Request Beta Access
+                    Request Engine Early Access
                   </h3>
                   {submitError && (
                     <div className="p-3 rounded-xl bg-red-100 border border-red-300 text-red-800 text-sm">
@@ -243,7 +278,7 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
                       rows={4}
                       required
                       className="w-full px-4 py-3 bg-[#F4F2EE] border-2 border-[#111111] rounded-xl text-[#111111] placeholder-[#6F6F6F] focus:outline-none focus:ring-2 focus:ring-[#B7FF3A] resize-none"
-                      placeholder="Tell us about your operation..."
+                      placeholder="Tell us about your engineering requirements..."
                     />
                   </div>
 
@@ -282,6 +317,15 @@ const ContactSection = ({ className = '' }: ContactSectionProps) => {
             >
               Terms of Service
             </a>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default ContactSection;
+      </a>
           </div>
         </div>
       </div>

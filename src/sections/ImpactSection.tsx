@@ -85,27 +85,27 @@ const ImpactSection = ({ className = '' }: ImpactSectionProps) => {
   const stats = [
     {
       icon: TrendingUp,
-      value: '72% → 94%',
-      label: 'On-Time Arrival',
-      desc: 'Dramatic improvement in service reliability',
+      value: '2.5x',
+      label: 'Compute Efficiency',
+      desc: 'Significant reduction in CPU cycles per solve',
     },
     {
       icon: Users,
-      value: '+47%',
-      label: 'Customer Retention',
-      desc: 'Higher renewal rates from consistent service',
+      value: '100%',
+      label: 'Memory Safety',
+      desc: 'Built in Rust with zero runtime exceptions',
     },
     {
       icon: DollarSign,
-      value: '$380K+',
-      label: 'Added Revenue/Truck',
-      desc: 'Additional annual profit per vehicle',
+      value: '90%',
+      label: 'Lower Infra Costs',
+      desc: 'Runs on minimal edge hardware',
     },
     {
       icon: Rocket,
-      value: '33%',
-      label: 'Faster Expansion',
-      desc: 'Grow faster without new vehicles',
+      value: 'Agentic',
+      label: 'Ready for AI',
+      desc: 'Seamless MCP server integration',
     },
   ];
 
@@ -123,7 +123,7 @@ const ImpactSection = ({ className = '' }: ImpactSectionProps) => {
         >
           <img
             src="/images/impact_truck_road.jpg"
-            alt="Waste truck on road"
+            alt="Technical infrastructure visualization"
             className="w-full h-full object-cover"
           />
         </div>
@@ -134,13 +134,13 @@ const ImpactSection = ({ className = '' }: ImpactSectionProps) => {
           className="card-lime absolute left-[4vw] lg:left-[40vw] top-[10vh] w-[92vw] lg:w-[56vw] h-auto min-h-[30vh] p-6 lg:p-8"
         >
           <span className="font-mono-label text-xs text-[#111111]/70 mb-4 block">
-            Impact
+            Performance
           </span>
           <h2 className="font-display font-bold text-3xl lg:text-4xl xl:text-5xl text-[#111111] mb-2">
-            Real Results
+            Engineering Impact
           </h2>
           <p className="font-display font-semibold text-lg lg:text-xl text-[#111111]/80">
-            The business impact
+            System Reliability & Throughput
           </p>
         </div>
 
@@ -179,20 +179,20 @@ const ImpactSection = ({ className = '' }: ImpactSectionProps) => {
           <div className="bg-[#111111] rounded-2xl p-6">
             <Quote className="w-8 h-8 text-[#B7FF3A] mb-4" />
             <blockquote className="text-white text-base lg:text-lg leading-relaxed mb-4">
-              "After implementing route optimization, our average daily mileage
-              dropped from 620 to 450 miles per truck—a 28% decrease!"
+              "Moving the solver to Rust eliminated our dependency on heavy Python runtimes. 
+              We've seen a 10x throughput increase in our MCP pipelines with zero memory leaks."
             </blockquote>
             <div className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-full bg-[#B7FF3A] flex items-center justify-center">
                 <span className="font-display font-bold text-sm text-[#111111]">
-                  RF
+                  SG
                 </span>
               </div>
               <div>
                 <div className="text-white font-semibold text-sm">
-                  Ryan Ferris
+                  Lead Engineer
                 </div>
-                <div className="text-[#6F6F6F] text-xs">Acme Waste</div>
+                <div className="text-[#6F6F6F] text-xs">Spacial Glacier</div>
               </div>
             </div>
           </div>

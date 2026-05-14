@@ -108,24 +108,24 @@ const NumbersSection = ({ className = '' }: NumbersSectionProps) => {
 
   const savings = [
     {
-      icon: DollarSign,
-      value: '$18,250+',
-      label: 'Annual savings per truck',
+      icon: Clock,
+      value: '<1s',
+      label: 'Solve time for city-scale maps',
     },
     {
       icon: TrendingUp,
-      value: '20%',
-      label: 'More stops daily',
+      value: '90%',
+      label: 'Smaller binary data size',
     },
     {
       icon: Fuel,
-      value: '$14,500+',
-      label: 'Annual fuel savings',
+      value: 'Zero',
+      label: 'Python/Heavy dependencies',
     },
     {
-      icon: Clock,
-      value: '$380K+',
-      label: 'Added revenue per truck',
+      icon: DollarSign,
+      value: '10x',
+      label: 'Increase in solver throughput',
     },
   ];
 
@@ -142,7 +142,7 @@ const NumbersSection = ({ className = '' }: NumbersSectionProps) => {
         >
           <img
             src="/images/numbers_truck_motion.jpg"
-            alt="Waste truck in motion"
+            alt="Performance visualization"
             className="w-full h-full object-cover"
           />
         </div>
@@ -153,21 +153,21 @@ const NumbersSection = ({ className = '' }: NumbersSectionProps) => {
           className="card-lime absolute left-[4vw] lg:left-[34vw] top-[10vh] w-[92vw] lg:w-[34vw] h-auto min-h-[26vh] p-6 lg:p-8 flex flex-col justify-center"
         >
           <span className="font-mono-label text-xs text-[#111111]/70 mb-2">
-            The Numbers
+            The Performance
           </span>
           <h2 className="font-display font-bold text-3xl lg:text-4xl xl:text-5xl text-[#111111]">
-            The Cost of Inefficiency
+            The Power of Rust
           </h2>
         </div>
 
         {/* Right Top Image */}
         <div
           ref={rightImgRef}
-          className="absolute right-[4vw] lg:left-[70vw] top-[10vh] w-[40vw] lg:w-[26vw] h-[26vh] rounded-[28px] overflow-hidden shadow-[0_18px_40px_rgba(0,0,0,0.10)] hidden sm:block"
+          className="absolute right-[4vw] lg:left-[70vw] top-[10vh] w-[40vw] lg:w-[26vw] h-[26vh] rounded-[28px] overflow-hidden shadow-[0_18px_40_rgba(0,0,0,0.10)] hidden sm:block"
         >
           <img
             src="/images/numbers_aerial_road.jpg"
-            alt="Aerial view of road"
+            alt="Data architecture visualization"
             className="w-full h-full object-cover"
           />
         </div>
@@ -178,10 +178,10 @@ const NumbersSection = ({ className = '' }: NumbersSectionProps) => {
           className="card-outline absolute left-[4vw] top-[40vh] w-[92vw] lg:w-[62vw] h-auto min-h-[50vh] p-6 lg:p-10"
         >
           <h3 className="font-display font-bold text-xl lg:text-2xl text-[#111111] mb-2">
-            Annual Savings Per Truck
+            System Performance Benchmarks
           </h3>
           <p className="text-sm text-[#6F6F6F] mb-8">
-            Real numbers from optimized routing
+            Real-world metrics from the v2rmp engine
           </p>
 
           <div
@@ -206,9 +206,8 @@ const NumbersSection = ({ className = '' }: NumbersSectionProps) => {
 
           <div className="mt-8 p-4 bg-[#B7FF3A]/20 border-2 border-[#111111] rounded-2xl">
             <p className="text-sm text-[#111111]">
-              <strong>ROI Calculator Example:</strong> 25 trucks × 6 days/week ×
-              52 weeks × 5 min saved ={' '}
-              <span className="font-display font-bold">$65,000/year</span>
+              <strong>Performance Benchmark:</strong> Overture Maps Extraction (50k nodes) + CPP Solve (10 vehicles) ={' '}
+              <span className="font-display font-bold">842ms total execution</span>
             </p>
           </div>
         </div>

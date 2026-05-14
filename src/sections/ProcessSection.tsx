@@ -110,23 +110,23 @@ const ProcessSection = ({ className = '' }: ProcessSectionProps) => {
     {
       num: '01',
       icon: Upload,
-      title: 'Plan Your Route',
-      desc: 'Import GPX files or create routes directly in the app. Add stops, set priorities, and optimize your path.',
-      badges: ['GPX Import', 'Custom Routes', 'Priority Stops'],
+      title: 'Extract & Ingest',
+      desc: 'Pull high-fidelity road networks from Overture Maps via S3 or local OSM PBF files. Automatic bounding box filtering for city-scale performance.',
+      badges: ['Overture Maps', 'OSM PBF', 'BBox Filtering'],
     },
     {
       num: '02',
       icon: Navigation,
-      title: 'Navigate with Confidence',
-      desc: 'Follow turn-by-turn directions with voice guidance. Preview stops with street-level imagery.',
-      badges: ['Voice Guidance', 'Street View', 'Real-time'],
+      title: 'High-Performance Optimization',
+      desc: 'Run multi-vehicle VRP or edge-coverage CPP solvers with turn penalties and elevation constraints in a pure Rust async pipeline.',
+      badges: ['Pure Rust', 'Terrain Aware', 'Async Pipeline'],
     },
     {
       num: '03',
       icon: CheckCircle,
-      title: 'Track Completion',
-      desc: 'Mark stops as completed, add notes, and keep your route organized from start to finish.',
-      badges: ['Mark Complete', 'Add Notes', 'Stay Organized'],
+      title: 'Agentic Deployment',
+      desc: 'Deploy via the MCP Server for AI automation, interactive TUI/GUI, or lightweight .rmp binary exports.',
+      badges: ['MCP Server', 'TUI/GUI', '.rmp Binary'],
     },
   ];
 

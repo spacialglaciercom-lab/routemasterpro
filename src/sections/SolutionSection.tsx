@@ -1,8 +1,8 @@
 import { useRef, useLayoutEffect } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
-import { Check, Download, Globe, Smartphone, Wifi } from 'lucide-react';
-import { TESTFLIGHT_INVITE_URL } from '@/constants';
+import { Check, Download, Globe, Smartphone, Wifi, Zap, Box, Brain } from 'lucide-react';
+import { GITHUB_URL, CRATES_IO_URL, HUGGING_FACE_URL } from '@/constants';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -90,24 +90,24 @@ const SolutionSection = ({ className = '' }: SolutionSectionProps) => {
 
   const features = [
     {
-      icon: Check,
-      title: 'Purpose-built',
-      desc: 'Designed from the ground up for waste collection professionals',
+      icon: Zap,
+      title: 'Rust Powered',
+      desc: 'Engineered for speed and safety. Zero garbage collection and ultra-low memory footprint.',
     },
     {
       icon: Globe,
-      title: 'Optimized',
-      desc: 'Works everywhere — optimized for Quebec, compatible globally',
+      title: 'Agent-First',
+      desc: 'Native MCP server allows AI agents to optimize and control routing pipelines autonomously.',
     },
     {
       icon: Smartphone,
-      title: 'Easy to Use',
-      desc: 'Intuitive interface that drivers love, minimal training required',
+      title: 'Data Sovereign',
+      desc: 'Full offline support and .rmp binary format ensure your spatial data stays under your control.',
     },
     {
       icon: Wifi,
-      title: 'Offline',
-      desc: 'Download maps for remote areas — navigate without connectivity',
+      title: 'Overture Native',
+      desc: 'Built for the next generation of spatial data, with native support for the Overture Maps schema.',
     },
   ];
 
@@ -131,7 +131,7 @@ const SolutionSection = ({ className = '' }: SolutionSectionProps) => {
         >
           <img
             src="/images/solution_truck_city.jpg"
-            alt="Waste truck in city"
+            alt="Technical data visualization"
             className="w-full h-full object-cover"
           />
         </div>
@@ -145,10 +145,10 @@ const SolutionSection = ({ className = '' }: SolutionSectionProps) => {
             THE SOLUTION
           </span>
           <h2 className="font-display font-bold text-3xl lg:text-4xl xl:text-5xl text-[#111111] mb-2">
-            Meet RouteMaster Pro
+            RouteMaster Pro v2
           </h2>
           <p className="font-display font-semibold text-lg lg:text-xl text-[#111111]/80">
-            Smart navigation for smarter routes.
+            High-performance intelligence for the modern spatial web.
           </p>
         </div>
 
@@ -158,8 +158,9 @@ const SolutionSection = ({ className = '' }: SolutionSectionProps) => {
           className="card-outline absolute left-[4vw] lg:left-[40vw] top-[44vh] w-[92vw] lg:w-[56vw] h-auto min-h-[46vh] p-6 lg:p-8"
         >
           <p className="text-base lg:text-lg text-[#6F6F6F] mb-8">
-            Route planning and turn-by-turn navigation designed specifically for
-            trash collection routes. Save time, fuel, and stress on every route.
+            v2rmp is a complete rewrite of the RouteMasterPro engine in pure Rust. 
+            It brings unprecedented performance, agentic automation, and terrain-aware 
+            optimization to complex routing problems like CPP and VRP.
           </p>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-8">
@@ -178,17 +179,40 @@ const SolutionSection = ({ className = '' }: SolutionSectionProps) => {
             ))}
           </div>
 
-          <div ref={ctaRef} className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
-            <a
-              href={TESTFLIGHT_INVITE_URL}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="btn-primary inline-flex items-center"
-            >
-              <Download className="w-5 h-5 mr-2" />
-              Download on TestFlight
-            </a>
-            <span className="text-sm text-[#6F6F6F]">iOS 15+ required</span>
+          <div ref={ctaRef} className="flex flex-col gap-6">
+            <div className="flex flex-col sm:flex-row items-start sm:items-center gap-4">
+              <a
+                href={GITHUB_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="btn-primary inline-flex items-center"
+              >
+                <Globe className="w-5 h-5 mr-2" />
+                Explore on GitHub
+              </a>
+              <span className="text-sm text-[#6F6F6F]">Pure Rust • Open Core</span>
+            </div>
+            
+            <div className="flex flex-wrap gap-4">
+              <a
+                href={CRATES_IO_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-sm font-semibold text-[#111111] hover:text-[#6F6F6F] transition-colors bg-white border-2 border-[#111111] px-4 py-2 rounded-xl shadow-[4px_4px_0px_#111111] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all"
+              >
+                <Box className="w-4 h-4 mr-2" />
+                Cargo Package
+              </a>
+              <a
+                href={HUGGING_FACE_URL}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center text-sm font-semibold text-[#111111] hover:text-[#6F6F6F] transition-colors bg-white border-2 border-[#111111] px-4 py-2 rounded-xl shadow-[4px_4px_0px_#111111] hover:translate-x-[2px] hover:translate-y-[2px] hover:shadow-none transition-all"
+              >
+                <Brain className="w-4 h-4 mr-2" />
+                ML Models
+              </a>
+            </div>
           </div>
         </div>
       </div>
